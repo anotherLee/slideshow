@@ -1,8 +1,17 @@
 require('./index.css')
 var $ = require('./jquery.min')
+import img1 from './images/cat11.jpg'
+import img2 from './images/cat22.jpg'
+import img3 from './images/cat33.jpg'
+import img4 from './images/cat44.jpg'
+
+console.log(typeof img1)
+console.log(img1)
 
 
 $(function(){
+  let $htmlFile = $(`<div class="slideShow"> <div class="view"> <div class="slide"> <img src=${img1} alt=""/> </div> <div class="slide"> <img src=${img2} alt=""/> </div> <div class="slide"> <img src=${img3} alt=""/> </div> <div class="slide"> <img src=${img4} alt=""/> </div> </div> </div>`)
+  $('body').append($htmlFile)
   let $slideShow = $('.slideShow')
   let $view = $('.view')
   let count = $view.children().length

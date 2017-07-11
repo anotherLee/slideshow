@@ -11,7 +11,7 @@ module.exports = {
   module:{
     loaders: [
       { test: /\.html$/, loader: 'html-loader'},
-      { test: /\.(jpg|png)$/, loader: 'url-loader!file-loader'},
+      { test: /\.(jpg|png)$/, loader: 'image-webpack-loader!url-loader' },
       { test: /\.css$/, loader: 'style-loader!css-loader'},
       { test: /\.js$/, loader: 'babel-loader', query: {"presets": ["es2015"]} }
     ]
